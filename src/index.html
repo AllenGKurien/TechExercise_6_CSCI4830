@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator Testing Project</title>
+</head>
+<body>
+  <h1>Calculator</h1>
+
+  <label for="first-number">First number:</label>
+  <input id="first-number" type="number">
+
+  <label for="second-number">Second number:</label>
+  <input id="second-number" type="number">
+
+  <button id="add-button">Add</button>
+
+  <p id="result"></p>
+
+  <script>
+    document
+      .getElementById("add-button")
+      .addEventListener("click", function () {
+        const firstNumber = Number(
+          document.getElementById("first-number").value
+        );
+
+        const secondNumber = Number(
+          document.getElementById("second-number").value
+        );
+
+        document.getElementById("result").textContent =
+          firstNumber + secondNumber;
+      });
+  </script>
+</body>
+</html>
+EOF
